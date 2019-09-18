@@ -14,8 +14,8 @@ export default function Main({id}) {
         <>
             <Typography>Hi! Welcome {id} user!</Typography>
             <MetaMaskLogo style={{padding: 52}} />
-            <Grid container spacing={0} direction="row" align='center' justify='center'>
-                <Grid item xs={12}  align='center'>
+            <Grid container style={{paddingBottom: 40}} spacing={0} direction="row" align='center' justify='center'>
+                <Grid item xs={12} style={{paddingBottom:30}} align='center'>
                     <BuyButton />
                 </Grid>
                 <Grid item xs={4} align='center'>
