@@ -18,6 +18,8 @@ const useStyles = makeStyles(theme => ({
     wyreLogo: {
         flexGrow: 1,
         marginRight: theme.spacing(2),
+        justifyItems:'right',
+        marginTop: '20px'
     },
     item: {
         marginRight: theme.spacing(2),

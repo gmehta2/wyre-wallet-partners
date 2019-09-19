@@ -12,23 +12,25 @@ export default function Main({id}) {
 
     return (
         <>
-            <Typography>Hi! Welcome {id} user!</Typography>
+            <Typography><h1> <text style ={{color:'grey'}}>Welcome {id} user!</text></h1></Typography>
             <MetaMaskLogo style={{padding: 52}} />
-            <Grid container style={{paddingBottom: 40}} spacing={0} direction="row" align='center' justify='center'>
+            <Grid container style={{paddingBottom: 60}} spacing={0} direction="row" align='center' justify='center'>
                 <Grid item xs={12} style={{paddingBottom:30}} align='center'>
                     <BuyButton />
                 </Grid>
-                <Grid item xs={4} align='center'>
+                <Grid container direction="row" justify="center" item xs={1} align='center'>
                     <UsdcLogo />
                 </Grid>
-                <Grid item xs={4} align='center'>
+                <Grid container direction="row" justify="center" item xs={1} align='center'>
                     <EthLogo />
                 </Grid>
-                <Grid item xs={4} align='center'>
+                <Grid container direction="row" justify="center" item xs={1} align='center'>
                     <DaiLogo />
                 </Grid>
             </Grid>
-            <Typography>How does it work?</Typography>
+            <Typography><h2> <text style={{color:'grey'}}> HOW IT WORKS </text> </h2></Typography>
+            <Typography><h2> <text style ={{color:'orange'}}> MetaMask brings Ethereum to your Browser </text> </h2></Typography>
+            <Typography> <h2><text style ={{color:'blue'}}>Wyre brings fiat on ramp to Metamask</text> </h2></Typography>
         </>
     )
 }
