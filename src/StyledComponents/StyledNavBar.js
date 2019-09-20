@@ -12,11 +12,11 @@ const useStyles = makeStyles(theme => ({
         flexGrow: 1,
     },
     navBar: {
-        height: '72px',
+        height: '70px',
         backgroundImage: 'linear-gradient(-31deg, #0092FF 0%, #1A32AF 100%)'
     },
     wyreLogo: {
-        flexGrow: 1,
+        flexGrow: 3,
         marginRight: theme.spacing(2),
         justifyItems:'right',
         marginTop: '20px'

@@ -31,6 +31,21 @@ export default function Main({id}) {
             <Typography><h2> <text style={{color:'grey'}}> HOW IT WORKS </text> </h2></Typography>
             <Typography><h2> <text style ={{color:'orange'}}> MetaMask brings Ethereum to your Browser </text> </h2></Typography>
             <Typography> <h2><text style ={{color:'blue'}}>Wyre brings fiat on ramp to Metamask</text> </h2></Typography>
-        </>
+
+            <Grid container style={{paddingBottom: 60}} spacing={0} direction="row" align='center' justify='center'> 
+            <Grid item xs={12} style={{paddingBottom:30}} align='center'>
+                <text style={{color:'grey'}}> 
+                    Step 1
+                    Step 2
+                    Step 3
+                    </text>
+                </Grid>
+                <Grid container style={{paddingBottom: 60}} spacing={0} direction="row" align='center' justify='start'> 
+                <Grid item xs={12} style={{paddingBottom:30}} justifyContent='flex-start'>
+                    FAQ
+                    </Grid>
+    </Grid>
+                </Grid> 
+                 </>
     )
 }

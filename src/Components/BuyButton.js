@@ -3,6 +3,7 @@ import { ethers } from 'ethers'
 import { useWeb3Context, Connectors } from 'web3-react'
 import StyledButton from './../StyledComponents/StyledButton'
 
+
 const { Connector } = Connectors
 
 export default function ConnectButton() {
