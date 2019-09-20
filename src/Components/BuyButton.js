@@ -39,6 +39,7 @@ export default function ConnectButton() {
                         instantiate()
                     }}
                     color="primary"
+                    style ={{fontFamily: 'Futura-Medium'}}
                     text='Buy Cryptocurrency!'
                 />
             )}
