@@ -40,7 +40,7 @@ export default function ConnectButton() {
                     }}
                     color="primary"
                     style ={{fontFamily: 'Futura-Medium'}}
-                    text='Buy Cryptocurrency!'
+                    text='Buy Cryptocurrency'
                 />
             )}
         </>
