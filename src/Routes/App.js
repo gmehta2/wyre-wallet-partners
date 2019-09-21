@@ -30,7 +30,6 @@ function App() {
                 height: 'auto',
                 position: 'relative',
                 overflow: 'scroll',
-                paddingBottom: '100px',
                 paddingTop: '150px',
                 alignItems: 'center',
             }}
