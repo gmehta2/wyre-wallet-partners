@@ -22,7 +22,7 @@ export default function ConnectButton() {
 
     function instantiate() {
         setConnector('MetaMask')
-        // instantiate Wyre Widget
+        console.log(account)
     }
 
     return (
