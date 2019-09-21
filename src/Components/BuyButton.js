@@ -3,10 +3,9 @@ import { ethers } from 'ethers'
 import { useWeb3Context, Connectors } from 'web3-react'
 import StyledButton from './../StyledComponents/StyledButton'
 
-
 const { Connector } = Connectors
 
-export default function ConnectButton() {
+export default function ConnectButton({id}) {
   const { active, account, setConnector, error } = useWeb3Context()
 
   useEffect(() => {
@@ -14,14 +13,16 @@ export default function ConnectButton() {
       const library = new ethers.providers.Web3Provider(window.ethereum)
       library.listAccounts().then(accounts => {
         if (accounts.length >= 1) {
-          setConnector('MetaMask', { suppressAndThrowErrors: true }).catch(() => {})
+          setConnector(id.connector, { suppressAndThrowErrors: true }).catch(() => {})
         }
       })
     }
   })
 
     function instantiate() {
-        setConnector('MetaMask')
+        if(!active){
+            setConnector(id.connector)
+        }
         console.log(account)
     }
 

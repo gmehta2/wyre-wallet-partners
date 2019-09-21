@@ -4,11 +4,6 @@ import { makeStyles } from '@material-ui/core/styles'
 import BuyButton from './../Components/BuyButton'
 import { Typography, Link } from '@material-ui/core';
 
-// Include Wallet Logos Here
-import { ReactComponent as MetaMaskLogo } from './../Assets/WalletLogos/meta-mask-logo.svg'
-import { ReactComponent as TrustWalletLogo } from './../Assets/WalletLogos/trust-wallet-logo.svg'
-
-// Include Currency Logos here
 import { ReactComponent as DaiLogo } from './../Assets/CurrencyLogos/dai-logo.svg'
 import { ReactComponent as UsdcLogo } from './../Assets/CurrencyLogos/usdc-logo.svg'
 import { ReactComponent as EthLogo } from './../Assets/CurrencyLogos/eth-logo.svg'
@@ -43,7 +38,7 @@ export default function Main({id}) {
             {id.logo}
             <Grid container style={{paddingBottom: 60}} spacing={0} direction="row" align='center' justify='center'>
                 <Grid item xs={12} style={{paddingBottom:30}} align='center'>
-                    <BuyButton />
+                    <BuyButton id={id} />
                 </Grid>
                 <Grid container direction="row" justify="center" item xs={1} align='center'>
                     <UsdcLogo />
