@@ -88,7 +88,7 @@ export default function Main({id}) {
                         </Grid>
                         <Grid item xs={6} style={{paddingBottom: 70, justifyContent: 'center'}}> 
                             <Typography className={classes.textColorTwo}> Where will my funds be stored? </Typography>
-                            <Typography className={classes.textParagraph}> Once you purchase crypto on this site, you will see your funds deposited within your MetaMask wallet directly. </Typography>
+                            <Typography className={classes.textParagraph}> Once you purchase crypto on this site, you will see your funds deposited within your {id.name} wallet directly. </Typography>
                         </Grid>
                         <Grid item xs={6} style={{paddingBottom: 70, justifyContent: 'center'}}> 
                             <Typography className={classes.textColorOne}>  What are the fees? </Typography>

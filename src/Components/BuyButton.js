@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { ethers } from 'ethers'
 import { useWeb3Context, Connectors } from 'web3-react'
 import StyledButton from './../StyledComponents/StyledButton'
-
 const { Connector } = Connectors
 
 export default function ConnectButton({id}) {
@@ -23,7 +22,11 @@ export default function ConnectButton({id}) {
         if(!active){
             setConnector(id.connector)
         }
-        console.log(account)
+        console.log(window)
+        let redirectUrl = window.location.href;
+
+        const wyreWidget = 'https://pay.testwyre.com/purchase?dest=' + account + '&redirectUrl=' + redirectUrl
+        Object.assign(document.createElement('a'), { target: '_blank', href: wyreWidget}).click();
     }
 
     return (
@@ -46,4 +49,5 @@ export default function ConnectButton({id}) {
             )}
         </>
     )
+
 }

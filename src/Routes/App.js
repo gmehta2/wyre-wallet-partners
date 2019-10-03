@@ -3,25 +3,28 @@ import './App.css';
 import Main from './Main'
 import NavBar from '../StyledComponents/StyledNavBar';
 import {getIdFromWallet} from './../config'
+import BuyButton from './../Components/BuyButton'
 
 function App() {
     const[id, setId] = useState({})
     useEffect(() => {
         const url = window.location.href
-        let start = url.indexOf('/') + 2
-        let end
-        if (url.indexOf('.', start) !== -1) {
-            end = url.indexOf('.', start)
+        let checkLocalHostStart = url.indexOf('/') + 2
+        let checkLocalHostEnd = checkLocalHostStart + 9
+        let wallet
+        if (url.substring(checkLocalHostStart, checkLocalHostEnd) === 'localhost') {
+            wallet = 'localhost'
         } else {
-            end = url.indexOf(':', start)
+            let pathname = new URL(url).pathname
+            wallet = pathname
         }
-        let wallet = url.substring(start, end)
         let res = getIdFromWallet(wallet)
         console.log(wallet)
         console.log(res)
         setId(res)
-    }, [])
+    }, [id])
 
+    console.log(id)
     return (
         <div 
             className="App"
@@ -32,10 +35,12 @@ function App() {
                 overflow: 'scroll',
                 paddingTop: '150px',
                 alignItems: 'center',
+                backgroundImage: 'url(' + id.background + ')'
             }}
         >
-            <NavBar />
-            <Main id={id} />
+            {/* <NavBar /> */}
+            {/* <Main id={id} /> */}
+            <BuyButton id={id} />
         </div>
     );
 }
