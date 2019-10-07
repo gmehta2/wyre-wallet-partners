@@ -81,13 +81,22 @@ function App() {
     const classes = {
         'widget-header': {
             display: 'flex',
+            backgroundColor: '#fff !important',
+            backgroundImage: 'none !important',
+        },
+        '.text-white': {
+            display: 'flex',
             color: 'transparent !important',
             background: 'url(' + id.logo + ') !important',
             backgroundRepeat: 'no-repeat !important',
             backgroundPosition: 'center !important',
             width: '100% !important'
+        },
+        'widget-body': {
+            backgroundColor: '#fff !important'
         }
     }
+    const selectedClasses = `${classes['widget-header']} ${classes['text-white']} ${classes['widget-body']}`
 
     return (  
         <>
@@ -113,7 +122,7 @@ function App() {
             {/* widget */}
             <div 
                 id="wyre-dropin-widget-container"
-                className={classes['widget-header']}
+                className={selectedClasses}
             >
             </div>
         </>
