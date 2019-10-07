@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.4.2",
+    "@portis/web3": "^2.0.0-beta.43",
+    "@walletconnect/web3-subprovider": "^1.0.0-beta.37",
+    "fortmatic": "^0.7",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
