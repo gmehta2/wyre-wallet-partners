@@ -28,17 +28,17 @@ function App() {
         }
     }
 
-    // Detect partner based on URL
+    // Detect partner based on URL Fragment
     useEffect(() => {
         const url = window.location.href
         let checkLocalHostStart = url.indexOf('/') + 2
         let checkLocalHostEnd = checkLocalHostStart + 9
         let wallet
-        let pathname = new URL(url).pathname
-        if (pathname === '/' && url.substring(checkLocalHostStart, checkLocalHostEnd) === 'localhost') {
+        let hash = new URL(url).hash
+        if (hash === '' && url.substring(checkLocalHostStart, checkLocalHostEnd) === 'localhost') {
             wallet = 'localhost'
         } else {   
-            wallet = pathname.substring(1, pathname.length)
+            wallet = hash.substring(1, hash.length)
         }
         let res = getIdFromWallet(wallet)
         setId(res)
