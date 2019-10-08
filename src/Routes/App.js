@@ -1,8 +1,7 @@
 import React, {useState, useEffect } from 'react'
 import { useWeb3Context } from 'web3-react';
-import {getIdFromWallet} from './../config'
+import {getIdFromPartner} from './../config'
 import WalletConnectQRCodeModal from "@walletconnect/qrcode-modal";
-import Logo from './../Assets/PartnerLogos/binance-logo.svg'
 import {useScript} from './../Hooks'
 
 function App() {
@@ -33,14 +32,14 @@ function App() {
         const url = window.location.href
         let checkLocalHostStart = url.indexOf('/') + 2
         let checkLocalHostEnd = checkLocalHostStart + 9
-        let wallet
+        let partner
         let hash = new URL(url).hash
         if (hash === '' && url.substring(checkLocalHostStart, checkLocalHostEnd) === 'localhost') {
-            wallet = 'localhost'
+            partner = 'localhost'
         } else {   
-            wallet = hash.substring(1, hash.length)
+            partner = hash.substring(1, hash.length)
         }
-        let res = getIdFromWallet(wallet)
+        let res = getIdFromPartner(partner)
         setId(res)
     }, [id])
 
@@ -51,17 +50,36 @@ function App() {
         }
     }, [id])
 
-    // Instantiate the widget
+    // Instantiate the widget and partner-branded page
     useEffect(() => {
+        // Set favicon
+        let link = document.querySelector('link[rel="shortcut icon"]') ||
+        document.querySelector('link[rel="icon"]');
+
+        if (!link) {
+            link = document.createElement('link');
+            link.id = 'favicon';
+            link.rel = 'shortcut icon';
+            document.head.appendChild(link);
+        }
+
+        link.href = id.favicon
+
+        // Set page title
+        if (document.title != id.name) {
+            document.title = id.name;
+        }
+
         let widget = null
         function init() {
             // debit card
-            if (window.Wyre !== undefined && context.active) {
+            if (window.Wyre !== undefined) {
                 widget = new window.Wyre({
                     env: 'test',
                     operation: {
                         type: 'debitcard',
-                        dest: context.account
+                        dest: context.account,
+                        destCurrency: id.currency
                     }
                 });
         
