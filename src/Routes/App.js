@@ -13,6 +13,11 @@ function App() {
         verifyScriptUrl
     );
 
+    let filter
+    if (id.blurred) {
+        filter = 'blur(5px) brightness(0.9)'
+    }
+
     // If they're using wallet connect
     if (context.active && context.connectorName === "WalletConnect") {
         if (!context.account) {
@@ -128,7 +133,7 @@ function App() {
                     overflow: 'hidden',
                     alignItems: 'center',
                     background: 'url(' + id.background + ')',
-                    filter: 'blur(5px) brightness(0.9)',
+                    filter: filter,
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center top'

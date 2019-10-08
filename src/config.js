@@ -38,7 +38,8 @@ export const partners = {
         background: ExampleBackground, // Import your background
         logo: ExampleLogo, // Import your logo
         favicon: ExampleFavicon, // Import your favicon
-        currency: 'ETH' // Optional. Locks in a currency for purchase. Options are 'BTC', 'ETH', 'DAI', or 'USDC'
+        currency: 'ETH', // Optional. Locks in a currency for purchase. Options are 'BTC', 'ETH', 'DAI', or 'USDC'
+        blurred: true
     },
     localhost: {
         name: 'MetaMask',
@@ -46,61 +47,70 @@ export const partners = {
         background: ExampleBackground,
         logo: ExampleLogo,
         favicon: ExampleFavicon,
-        currency: 'ETH'
+        currency: 'ETH',
+        blurred: true
     },
     metamask: {
         name: 'MetaMask',
         connector: 'MetaMask',
         background: MetaMaskBackground,
         logo: MetaMaskLogo,
-        favicon: MetaMaskFavicon
+        favicon: MetaMaskFavicon,
+        blurred: true
     },
     trustwallet: {
         name: 'Trust Wallet',
         connector: 'TrustWallet',
         background: TrustWalletBackground,
         logo: TrustWalletLogo,
-        favicon: TrustWalletFavicon
+        favicon: TrustWalletFavicon,
+        blurred: true
     },
     portis: {
         name: 'Portis',
         connector: 'Portis',
         background: PortisBackground,
         logo: PortisLogo,
-        favicon: PortisFavicon
+        favicon: PortisFavicon,
+        blurred: true
     },
     fortmatic: {
         name: 'Fortmatic',
         connector: 'Fortmatic',
         background: FortmaticBackground,
         logo: FortmaticLogo,
-        favicon: FortmaticFavicon
+        favicon: FortmaticFavicon,
+        blurred: true
     },
     binance: {
         name: 'Binance',
         background: BinanceBackground,
         logo: BinanceLogo,
-        favicon: BinanceFavicon
+        favicon: BinanceFavicon,
+        blurred: true
     },
     lolli: {
         name: 'Lolli',
         background: LolliBackground,
         logo: LolliLogo,
         favicon: LolliFavicon,
-        currency: 'BTC'
+        currency: 'BTC',
+        blurred: true
     },
     'compound-finance': {
         name: 'Compound Finance',
         background: CompoundFinanceBackground,
         logo: CompoundFinanceLogo,
-        favicon: CompoundFinanceFavicon
+        favicon: CompoundFinanceFavicon,
+        blurred: true
     },
     celsius: {
         name: 'Celsius Network',
         background: CelsiusBackground,
         logo: CelsiusLogo,
         favicon: CelsiusFavicon,
-        currency: 'BTC'
+        currency: 'BTC',
+        blurred: false
     }
 }
 
