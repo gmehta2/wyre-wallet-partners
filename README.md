@@ -11,10 +11,12 @@ Uploads:
 3) Add your favicon as a `.ico` file in `/src/Assets/PartnerFavicons` following the naming convention: `partner-name-favicon.ico`. We generally recommend creating this `.ico` file by uploading a transparent logo to the [favicon.io converter](https://favicon.io/favicon-converter/).
 
 Config: 
+
 4) Import your background, logo, and favicon into `/src/config.js` as instructed in the file comments.
 5) Add your url as a config object with your preferred configurations, following the example available in the config file.
 
 Connecting a wallet (web3 wallet partners only):
+
 6) Update `/Components/Connectors.js` to include a [web3-react](https://noahzinsmeister.gitbook.io/web3-react/v/latest/connectors) connector for your project. If a connector does not exist for your project, see documentation on [writing a custom web3-react connector](https://noahzinsmeister.gitbook.io/web3-react/v/latest/custom-connectors) (and consider making a pull request on web3-react to add it to the official list!).
 
 7) Finally, confirm with the Wyre team who will review your pull request. Once your pull request is merged, your landing page will be live at https://partners.sendwyre.com/#[your-landing-page].
