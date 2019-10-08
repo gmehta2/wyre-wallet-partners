@@ -1,4 +1,3 @@
-
 // Import your background here
 import ExampleBackground from './Assets/PartnerBackgrounds/meta-mask-background.png'
 import MetaMaskBackground from './Assets/PartnerBackgrounds/meta-mask-background.png'
@@ -11,7 +10,15 @@ import CompoundFinanceBackground from './Assets/PartnerBackgrounds/compound-fina
 import CelsiusBackground from './Assets/PartnerBackgrounds/celsius-background.png'
 
 // Import your logo here
+import ExampleLogo from './Assets/PartnerLogos/meta-mask-logo.png'
+import MetaMaskLogo from './Assets/PartnerLogos/meta-mask-logo.png'
+import TrustWalletLogo from './Assets/PartnerLogos/trust-wallet-logo.png'
+import PortisLogo from './Assets/PartnerLogos/portis-logo.png'
+import FortmaticLogo from './Assets/PartnerLogos/fortmatic-logo.svg'
 import BinanceLogo from './Assets/PartnerLogos/binance-logo.svg'
+import LolliLogo from './Assets/PartnerLogos/lolli-logo.png'
+import CompoundFinanceLogo from './Assets/PartnerLogos/compound-finance-logo.png'
+import CelsiusLogo from './Assets/PartnerLogos/celsius-logo.png'
 
 // Import your favicon here
 import ExampleFavicon from './Assets/PartnerFavicons/wyre-favicon.ico'
@@ -27,17 +34,17 @@ import CelsiusFavicon from './Assets/PartnerFavicons/celsius-favicon.ico'
 export const partners = {
     example: { // define your object in all lowercase letters
         name: 'Example Wallet', // The name may have spaces if desired
-        connector: 'MetaMask', // The connector should have no spaces. This is the Web3 React Connector
+        connector: 'MetaMask', // Optional. The connector should have no spaces. This is the Web3 React Connector and will connect to your user's wallet and auto-populate their Ethereum address.
         background: ExampleBackground, // Import your background
-        logo: BinanceLogo, // Import your logo
+        logo: ExampleLogo, // Import your logo
         favicon: ExampleFavicon, // Import your favicon
-        currency: 'ETH'
+        currency: 'ETH' // Optional. Locks in a currency for purchase. Options are 'BTC', 'ETH', 'DAI', or 'USDC'
     },
     localhost: {
         name: 'MetaMask',
         connector: 'MetaMask',
         background: ExampleBackground,
-        logo: BinanceLogo,
+        logo: ExampleLogo,
         favicon: ExampleFavicon,
         currency: 'ETH'
     },
@@ -45,28 +52,28 @@ export const partners = {
         name: 'MetaMask',
         connector: 'MetaMask',
         background: MetaMaskBackground,
-        logo: BinanceLogo,
+        logo: MetaMaskLogo,
         favicon: MetaMaskFavicon
     },
     trustwallet: {
         name: 'Trust Wallet',
         connector: 'TrustWallet',
         background: TrustWalletBackground,
-        logo: BinanceLogo,
+        logo: TrustWalletLogo,
         favicon: TrustWalletFavicon
     },
     portis: {
         name: 'Portis',
         connector: 'Portis',
         background: PortisBackground,
-        logo: BinanceLogo,
+        logo: PortisLogo,
         favicon: PortisFavicon
     },
     fortmatic: {
         name: 'Fortmatic',
         connector: 'Fortmatic',
         background: FortmaticBackground,
-        logo: BinanceLogo,
+        logo: FortmaticLogo,
         favicon: FortmaticFavicon
     },
     binance: {
@@ -78,20 +85,20 @@ export const partners = {
     lolli: {
         name: 'Lolli',
         background: LolliBackground,
-        logo: BinanceLogo,
+        logo: LolliLogo,
         favicon: LolliFavicon,
         currency: 'BTC'
     },
     'compound-finance': {
         name: 'Compound Finance',
         background: CompoundFinanceBackground,
-        logo: BinanceLogo,
+        logo: CompoundFinanceLogo,
         favicon: CompoundFinanceFavicon
     },
     celsius: {
         name: 'Celsius Network',
         background: CelsiusBackground,
-        logo: BinanceLogo,
+        logo: CelsiusLogo,
         favicon: CelsiusFavicon,
         currency: 'BTC'
     }

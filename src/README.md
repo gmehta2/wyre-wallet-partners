@@ -7,7 +7,7 @@ Any Wyre partner can create a sendwyre landing page with a simple pull request. 
 
 Uploads: 
 1) Add the background image for your landing page as a .png file in `/src/Assets/PartnerBackgrounds` following the naming convention: `partner-name-background.png`.
-2) Add your logo as an `.svg` file in `/src/Assets/PartnerLogos` following the naming convention: `partner-name-logo.png`.
+2) Add your logo as a `.png` or `.svg` file in `/src/Assets/PartnerLogos` following the naming convention: `partner-name-logo.[png/svg]`.
 3) Add your favicon as a `.ico` file in `/src/Assets/PartnerFavicons` following the naming convention: `partner-name-favicon.ico`. We generally recommend creating this `.ico` file by uploading a transparent logo to the [favicon.io converter](https://favicon.io/favicon-converter/).
 
 Config: 
