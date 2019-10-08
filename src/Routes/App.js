@@ -122,11 +122,10 @@ function App() {
                 className="App"
                 style={{
                     width: '102%',
-                    height: '102%',
+                    height: '100vh',
                     top: '-1',
                     left: '-1',
-                    overflow: 'scroll',
-                    paddingTop: '100%',
+                    overflow: 'hidden',
                     alignItems: 'center',
                     background: 'url(' + id.background + ')',
                     filter: 'blur(5px) brightness(0.9)',
