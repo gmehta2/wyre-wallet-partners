@@ -18,3 +18,15 @@ Connecting a wallet (web3 wallet partners only):
 6) Update `/Components/Connectors.js` to include a [web3-react](https://noahzinsmeister.gitbook.io/web3-react/v/latest/connectors) connector for your project. If a connector does not exist for your project, see documentation on [writing a custom web3-react connector](https://noahzinsmeister.gitbook.io/web3-react/v/latest/custom-connectors) (and consider making a pull request on web3-react to add it to the official list!).
 
 7) Finally, confirm with the Wyre team who will review your pull request. Once your pull request is merged, your landing page will be live at https://partners.sendwyre.com/#[your landing page].
+
+# Currently Live Pages
+
+Currently live pages can be found at: `https://partners.sendwyre.com/#`
+- metamask
+- trustwallet
+- portis
+- fortmatic
+- binance
+- lolli
+- compound-finance
+- celsius
