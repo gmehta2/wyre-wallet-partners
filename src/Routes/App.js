@@ -66,7 +66,7 @@ function App() {
         link.href = id.favicon
 
         // Set page title
-        if (document.title != id.name) {
+        if (document.title !== id.name) {
             document.title = id.name;
         }
 
