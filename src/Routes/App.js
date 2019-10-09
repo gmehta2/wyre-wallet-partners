@@ -126,10 +126,9 @@ function App() {
             <div 
                 className="App"
                 style={{
-                    width: '102%',
-                    height: '100vh',
-                    top: '-1',
-                    left: '-1',
+                    width: '100%',
+                    height: '100%',
+                    position: 'fixed',
                     overflow: 'hidden',
                     alignItems: 'center',
                     background: 'url(' + id.background + ')',
