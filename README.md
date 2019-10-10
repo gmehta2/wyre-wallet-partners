@@ -34,3 +34,4 @@ Currently live pages can be found at: `https://partners.sendwyre.com/#`
 - lolli
 - compound-finance
 - celsius
+- joule labs
