@@ -116,14 +116,14 @@ export const partners = {
         blurred: false  
     },
     joule: {
-    name: 'Joule labs',
-    background: JouleBackground,
-    logo: JouleLogo,
-    favicon: JouleFavicon,
-    currency: 'BTC',
-    blurred: true
-
+        name: 'Joule labs',
+        background: JouleBackground,
+        logo: JouleLogo,
+        favicon: JouleFavicon,
+        currency: 'BTC',
+        blurred: true
     }
+}
 
 export function getIdFromPartner(partner) {
     return partners[partner]
